@@ -1,0 +1,86 @@
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Final Project DB Lab.exe.config
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Final Project DB Lab.exe
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Final Project DB Lab.pdb
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\EntityFramework.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\EntityFramework.SqlServer.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Guna.UI2.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Buffers.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Memory.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Numerics.Vectors.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Text.Encodings.Web.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Text.Json.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.ValueTuple.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\EntityFramework.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\EntityFramework.SqlServer.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Buffers.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Memory.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Numerics.Vectors.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Text.Encodings.Web.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Text.Json.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.ValueTuple.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.addUser.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.CreativeEdgeShop.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.customerForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.dashboardForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.inventoryForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.loginForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.Properties.Resources.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.rackForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.salesForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.vendorForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final Project DB Lab.csproj.GenerateResource.cache
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final Project DB Lab.csproj.CoreCompileInputs.cache
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final Project DB Lab.csproj.CopyComplete
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final Project DB Lab.exe
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final Project DB Lab.pdb
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.barcodes.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.bouncy-castle-connector.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.commons.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.forms.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.io.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.kernel.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.layout.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.pdfa.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.sign.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.styledxmlparser.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.svg.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Options.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Newtonsoft.Json.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.barcodes.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.bouncy-castle-connector.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.commons.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.forms.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.io.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.kernel.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.layout.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.pdfa.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.sign.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.styledxmlparser.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\itext.svg.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Options.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\Newtonsoft.Json.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.ShortListItemsForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.CustomerReportForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.vendorReportForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final_Project_DB_Lab.ExpenseForm.resources
+D:\ALI AJ\Documents\FAST Semester 4\DataBase Lab\Final Project DB Lab\Final Project DB Lab\obj\Debug\Final Project DB Lab.csproj.AssemblyReference.cache

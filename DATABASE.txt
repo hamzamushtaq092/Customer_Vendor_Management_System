@@ -1,0 +1,325 @@
+1.	USERS TABLE
+CREATE TABLE USERS(
+  user_name VARCHAR2(30) PRIMARY KEY,
+  name VARCHAR2(30) NOT NULL,
+  user_role VARCHAR2(10) DEFAULT 'Cashier' NOT NULL,
+  user_password VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE users
+ADD CHECK (LENGTH(user_password) >= 8);
+
+2.	RECEIPT TABLE
+CREATE TABLE receipt(
+  rec_no INT PRIMARY KEY,
+  rec_date DATE NOT NULL,
+  amount NUMBER DEFAULT 0 NOT NULL,
+  tax NUMBER DEFAULT 0 NOT NULL,
+  total_amount NUMBER DEFAULT 0 NOT NULL,
+  refund_issued INT DEFAULT 0 NOT NULL
+);
+
+ALTER TABLE receipt
+ADD user_name VARCHAR2(30) NOT NULL;
+
+ALTER TABLE receipt
+ADD CONSTRAINT receipt_rec_no_fk FOREIGN KEY(user_name) REFERENCES users(user_name)
+ON DELETE CASCADE;
+
+ALTER TABLE receipt
+ADD CHECK (refund_issued IN (0, 1));
+
+CREATE SEQUENCE rec_no_SEQ
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE OR REPLACE TRIGGER receipt_insert_trg
+BEFORE INSERT ON receipt
+FOR EACH ROW
+BEGIN
+:NEW.rec_no:= rec_no_SEQ.NEXTVAL;
+END;
+
+ALTER TABLE receipt
+ADD sales_id INT NOT NULL;
+
+ALTER TABLE receipt
+ADD CONSTRAINT receipt_sale_fk FOREIGN KEY(sales_id) REFERENCES sales(sales_id)
+ON DELETE CASCADE;
+
+3.	CUSTOMER TABLE
+CREATE TABLE customer(
+  cus_cnic VARCHAR2(15) PRIMARY KEY,
+  cus_name VARCHAR2(30) NOT NULL,
+  cus_address VARCHAR2(30),
+  cus_contact VARCHAR(12) NOT NULL
+);
+
+ALTER TABLE customer
+ADD CHECK (LENGTH(CUS_CNIC) = 15 AND
+SUBSTR(CUS_CNIC, 1, 5) BETWEEN '00000' AND '99999' AND
+SUBSTR(CUS_CNIC, 6, 1) = '-' AND
+SUBSTR(CUS_CNIC, 7, 7) BETWEEN '0000000' AND '9999999' AND
+SUBSTR(CUS_CNIC, 14, 1) = '-' AND
+SUBSTR(CUS_CNIC, 15, 1) BETWEEN '0' AND '9');
+
+ALTER TABLE customer
+ADD CHECK (SUBSTR(cus_contact,1,4) BETWEEN '0000' AND '9999'
+AND SUBSTR(cus_contact, 5, 1) = '-'
+AND SUBSTR(cus_contact,6) BETWEEN '0000000' AND '9999999');
+
+ALTER TABLE customer
+DROP COLUMN cus_address
+
+ALTER TABLE customer
+ADD city_code VARCHAR(5) NOT NULL
+
+ALTER TABLE customer
+ADD CONSTRAINT cus_city_code_fk FOREIGN KEY(city_code) REFERENCES address(city_code);
+
+4.	VENDOR TABLE
+CREATE TABLE vendor(
+  ven_id INT PRIMARY KEY,
+  ven_name VARCHAR2(30) NOT NULL,
+  ven_address VARCHAR2(30),
+  ven_contact VARCHAR(2) NOT NULL
+);
+
+ALTER TABLE vendor
+ADD CHECK (SUBSTR(ven_contact,1,4) BETWEEN '0000' AND '9999'
+AND SUBSTR(ven_contact, 5, 1) = '-'
+AND SUBSTR(ven_contact,6) BETWEEN '0000000' AND '9999999');
+
+ALTER TABLE vendor
+DROP COLUMN ven_address
+ALTER TABLE vendor
+ADD city_code VARCHAR(5) NOT NULL
+
+ALTER TABLE vendor
+ADD CONSTRAINT ven_city_code_fk FOREIGN KEY(city_code) REFERENCES address(city_code);
+
+ALTER TABLE vendor
+MODIFY ven_contact VARCHAR2(12);
+
+5.	PURCHASES TABLE
+CREATE TABLE purchases(
+  pur_id INT PRIMARY KEY,
+  pur_date DATE NOT NULL,
+  pur_amount NUMBER NOT NULL,
+  ven_id INT NOT NULL
+);
+
+ALTER TABLE purchases
+ADD CONSTRAINT pur_ven_id_fk FOREIGN KEY(ven_id) REFERENCES vendor(ven_id) 
+ON DELETE CASCADE;
+
+CREATE SEQUENCE PUR_ID_SEQ
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE OR REPLACE TRIGGER purchases_insert_trg
+BEFORE INSERT ON purchases
+FOR EACH ROW
+BEGIN
+:NEW.pur_id:= pur_id_SEQ.NEXTVAL;
+END;
+
+6.	EXPENSES TABLE
+CREATE TABLE expenses(
+  exp_id INT PRIMARY KEY,
+  exp_amount NUMBER NOT NULL,
+  exp_type VARCHAR2(20) NOT NULL,
+  exp_name VARCHAR2(30) NOT NULL,
+  exp_date DATE NOT NULL,
+  ven_id INT NOT NULL
+);
+
+CREATE SEQUENCE EXP_ID_SEQ
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE OR REPLACE TRIGGER expenses_insert_trg
+BEFORE INSERT ON expenses
+FOR EACH ROW
+BEGIN
+:NEW.exp_id:= exp_id_SEQ.NEXTVAL;
+END;
+
+ALTER TABLE expenses
+ADD CONSTRAINT exp_ven_id_fk FOREIGN KEY(ven_id) REFERENCES vendor(ven_id)
+ON DELETE CASCADE;
+
+7.	RACK TABLE
+CREATE TABLE RACK(
+  rack_no INT PRIMARY KEY,
+  rack_location VARCHAR2(15) NOT NULL,
+  rack_capacity INT DEFAULT 50 NOT NULL,
+  rack_strength INT DEFAULT 0 NOT NULL
+);
+
+ALTER TABLE rack
+ADD cat_name VARCHAR2(30) NOT NULL;
+
+ALTER TABLE rack
+ADD CHECK (rack_strength <= rack_capacity);
+
+ALTER TABLE rack
+ADD CONSTRAINT cat_name_fk FOREIGN KEY(cat_name) REFERENCES category(cat_name)
+ON DELETE CASCADE;
+
+8.	CATEGORY TABLE
+CREATE TABLE category(
+  cat_name VARCHAR2(30) PRIMARY KEY,
+  cat_description VARCHAR2(30) NOT NULL
+);
+
+
+
+
+9.	ITEM TABLE
+CREATE TABLE item(
+  item_id INT PRIMARY KEY,
+  item_name VARCHAR2(30) NOT NULL,
+  item_quantity INT DEFAULT 0 NOT NULL,
+  item_price NUMBER NOT NULL,
+  reorder_point INT NOT NULL,
+  item_desc VARCHAR2(30),
+  item_barcode INT UNIQUE NOT NULL,
+  cat_name VARCHAR2(30) NOT NULL,
+  rack_no INT NOT NULL
+);
+
+ALTER TABLE item
+ADD CONSTRAINT item_cat_name_fk FOREIGN KEY(cat_name) REFERENCES category(cat_name)
+ON DELETE CASCADE;
+
+ALTER TABLE item
+ADD CONSTRAINT item_rack_no_fk FOREIGN KEY(rack_no) REFERENCES rack(rack_no)
+ON DELETE CASCADE;
+
+CREATE SEQUENCE ITEM_ID_SEQ
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE OR REPLACE TRIGGER item_insert_trg
+BEFORE INSERT ON item
+FOR EACH ROW
+BEGIN
+:NEW.item_id:= item_id_SEQ.NEXTVAL;
+END;
+
+10.	PURCHASE_ITEMS TABLE
+CREATE TABLE purchase_items(
+  item_id INT NOT NULL,
+  pur_id INT NOT NULL,
+  unit_price NUMBER NOT NULL,
+  pur_quantity INT NOT NULL,
+  total_amount NUMBER NOT NULL
+);
+
+ALTER TABLE purchase_items
+DROP COLUMN total_amount;
+
+ALTER TABLE purchase_items
+ADD CONSTRAINT purchase_items_pk PRIMARY KEY(item_id, pur_id);
+
+ALTER TABLE purchase_items
+ADD CONSTRAINT purchase_items__item_fk FOREIGN KEY(item_id) REFERENCES item(item_id)
+ON DELETE CASCADE;
+
+ALTER TABLE purchase_items
+ADD CONSTRAINT purchase_items__pur_fk FOREIGN KEY(pur_id) REFERENCES purchases(pur_id)
+ON DELETE CASCADE;
+
+11.	SALES TABLE
+CREATE TABLE sales(
+  sales_id INT PRIMARY KEY,
+  sales_date DATE NOT NULL,
+  sales_amount NUMBER NOT NULL,
+  cus_cnic VARCHAR2(15) NOT NULL
+);
+
+CREATE SEQUENCE SALES_ID_SEQ
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE OR REPLACE TRIGGER sales_insert_trg
+BEFORE INSERT ON sales
+FOR EACH ROW
+BEGIN
+:NEW.sales_id:= sales_id_SEQ.NEXTVAL;
+END;
+
+ALTER TABLE sales
+ADD CONSTRAINT sales_fk FOREIGN KEY(cus_cnic) REFERENCES customer(cus_cnic)
+ON DELETE CASCADE;
+
+12.	SALES_ITEMS TABLE
+CREATE TABLE sales_items(
+  sales_id INT NOT NULL,
+  item_id INT NOT NULL,
+  sale_quantity INT NOT NULL,
+  unit_price NUMBER NOT NULL
+);
+
+ALTER TABLE sales_items 
+ADD CONSTRAINT sales_items_pk PRIMARY KEY(sales_id, item_id);
+
+ALTER TABLE sales_items 
+ADD CONSTRAINT sales_items_sale_fk FOREIGN KEY(sales_id) REFERENCES sales(sales_id)
+ON DELETE CASCADE;
+
+ALTER TABLE sales_items 
+ADD CONSTRAINT sales_items_item_fk FOREIGN KEY(item_id) REFERENCES item(item_id)
+ON DELETE CASCADE;
+
+13.	SALES_ITEMS TABLE
+CREATE TABLE address(
+  city_code VARCHAR(5) PRIMARY KEY,
+  city VARCHAR2(15) NOT NULL,
+  country VARCHAR2(15) NOT NULL
+);
+
+
+CREATE OR REPLACE TRIGGER updateItemsCategory
+AFTER UPDATE OF cat_name ON rack
+FOR EACH ROW
+BEGIN
+  UPDATE item SET cat_name = :NEW.cat_name WHERE cat_name = :OLD.cat_name;
+END;
+
+CREATE OR REPLACE TRIGGER updateRackStrength
+AFTER INSERT ON item
+FOR EACH ROW
+BEGIN
+  UPDATE rack SET rack_strength = rack_strength + :NEW.item_quantity 
+  WHERE rack_no = :NEW.rack_no;
+END;
+
+CREATE OR REPLACE TRIGGER updateRackStrengthOnDelete
+AFTER DELETE ON item
+FOR EACH ROW
+BEGIN
+  UPDATE rack SET rack_strength = rack_strength - :OLD.item_quantity 
+  WHERE rack_no = :OLD.rack_no;
+END;
+
+CREATE OR REPLACE TRIGGER updateRackStrengthOnUpdate
+AFTER UPDATE OF item_quantity ON item
+FOR EACH ROW
+BEGIN
+  UPDATE rack SET rack_strength = rack_strength - :OLD.item_quantity 
+  WHERE rack_no = :OLD.rack_no;
+
+  UPDATE rack SET rack_strength = rack_strength + :NEW.item_quantity 
+  WHERE rack_no = :OLD.rack_no;
+END;
+
+
+INSERT INTO users 
+VALUES('ali.mustafa', 'Muhammad Ali Mustafa', 'Admin', '57365736');
